@@ -1,0 +1,30 @@
+@import "../../../index.scss";
+.forms-image {
+  & img {
+    box-shadow: $secondary-background-color 30px 150px 0px 30px;
+    height: 768px;
+    margin-top: 100px;
+    object-fit: cover;
+    width: 512px;
+  }
+}
+
+@media screen and (max-width: $small-laptop) {
+  .forms-image {
+    & img {
+      box-shadow: $secondary-background-color 30px 100px 0px 30px;
+      height: 568px;
+      width: 342px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .forms-image {
+    & img {
+      box-shadow: $secondary-background-color 15px 80px 0px 15px;
+      height: 468px;
+      width: 252px;
+    }
+  }
+}

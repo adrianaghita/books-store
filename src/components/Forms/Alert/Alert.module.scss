@@ -1,0 +1,68 @@
+@import "../../../index.scss";
+.alert {
+  align-items: flex-start;
+  background-color: #00000080;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 100px;
+  width: 100vw;
+}
+
+.alert-box {
+  background-color: $bright-color;
+  border-radius: 2px;
+  margin-top: 347px;
+  width: 500px;
+}
+
+.alert-content {
+  margin: 24px 72px 39px 0;
+}
+
+.alert-title {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: $regular;
+  margin-bottom: 0;
+  padding-left: 72px;
+  position: relative;
+}
+
+.alert-message {
+  color: $gray-color;
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: $regular;
+  margin-top: 5px;
+  padding-left: 72px;
+}
+
+.alert-icon {
+  color: $accent-color;
+  height: 24px;
+  left: 32px;
+  position: absolute;
+  top: 3px;
+  width: 24px;
+}
+
+.alert-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 32px 16px 0;
+}
+
+.alert-cancel-button {
+  @include button-bright;
+  margin-right: 8px;
+  width: 75px;
+}
+
+.alert-confirm-button {
+  @include button;
+  width: 75px;
+}
