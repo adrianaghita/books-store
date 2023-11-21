@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "../pages/RootLayout";
+import RoutesLayout from "../pages/RoutesLayout";
 import HomePage from "../pages/HomePage";
 import BookDetailPage from "../pages/BookDetailPage/BookDetailPage";
 import ShoppingCartPage from "../pages/ShoppingCartPage";
@@ -13,7 +13,7 @@ import FavoritesRoute from "./FavoritesRoute";
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
+    element: <RoutesLayout />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "details/:bookId", element: <BookDetailPage /> },

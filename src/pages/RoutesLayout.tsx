@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import "../App.scss";
-function Root() {
+function RoutesLayout() {
   return (
     <>
       <Header />
@@ -14,4 +14,4 @@ function Root() {
   );
 }
 
-export default Root;
+export default RoutesLayout;
