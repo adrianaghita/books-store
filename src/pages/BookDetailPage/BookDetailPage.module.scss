@@ -1,0 +1,139 @@
+@import "../../index.scss";
+
+.book-details {
+  align-items: flex-start;
+  column-gap: 188px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 132px 200px 150px 200px;
+}
+
+.book-details-image {
+  height: 526px;
+  object-fit: contain;
+  width: 372px;
+}
+
+.book-details-content {
+  max-width: 652px;
+}
+
+.two-columns-grid {
+  @include two-columns-grid;
+}
+
+.book-details-title {
+  font-family: $primary-font;
+  font-size: 48px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.book-details-author {
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: $bold;
+  margin: 8px 0 0 0;
+  white-space: nowrap;
+
+  & span {
+    font-size: 20px;
+    font-weight: $regular;
+    font-weight: normal;
+  }
+}
+
+.book-details-price {
+  color: $accent-color;
+  font-family: $secondary-font;
+  font-size: 38px;
+  font-weight: $bold;
+  margin: 10px 0 0 10px;
+}
+
+.book-details-description {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: $regular;
+  margin: 48px 0 48px 0;
+}
+
+.actions {
+  display: flex;
+}
+
+.button {
+  @include button;
+}
+
+.add-to-favorites {
+  @include button-custom;
+  border: 1px solid $border-color;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $bright-color;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 3s ease-out;
+  margin-left: 20px;
+
+  &:active {
+    transform: scale(3, 3);
+  }
+
+  & .red {
+    color: rgb(165, 6, 6);
+    transition: color 1s ease;
+  }
+
+  & .black {
+    color: $primary-color;
+    transition: color 1s ease;
+  }
+}
+
+@media screen and (max-width: $small-laptop) {
+  .book-details {
+    column-gap: 100px;
+    margin: 132px 150px 150px 150px;
+  }
+  .book-details-image {
+    width: 300px;
+    height: 430px;
+  }
+
+  .book-details-title {
+    font-size: 35px;
+  }
+
+  .book-details-author {
+    font-size: 20px;
+  }
+
+  .book-details-price {
+    font-size: 28px;
+  }
+
+  .book-details-description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .book-details {
+    margin: 120px 50px 150px 50px;
+  }
+  .book-details-title {
+    font-size: 28px;
+  }
+
+  .book-details-price {
+    font-size: 25px;
+    margin-top: 5px;
+  }
+}
