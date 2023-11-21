@@ -1,0 +1,106 @@
+@import "../../index.scss";
+
+.register-section {
+  align-items: flex-start;
+  box-sizing: border-box;
+  column-gap: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 120px;
+  max-width: 100vw;
+}
+
+.register-image {
+  height: 550px;
+  width: 512px;
+}
+
+.register-form {
+  & input {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: $regular;
+    margin-top: 16px;
+    padding: 10px 0 11px 12px;
+    width: 512px;
+  }
+
+  & label {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: $bold;
+    margin-top: 32px;
+  }
+}
+
+.register-form-title {
+  font-family: $primary-font;
+  font-size: 48px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.register-form-description {
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: $regular;
+  margin: 11px 0 64px 0;
+}
+
+.register-form-btn {
+  @include button;
+  display: block;
+  margin-top: 50px;
+}
+
+.register-form-btn-disabled {
+  @include button-disabled;
+  margin-top: 50px;
+}
+
+.invalid-input {
+  @include invalid-input;
+}
+
+@media screen and (max-width: 1024px) {
+  .register-section {
+    column-gap: 80px;
+    justify-content: flex-start;
+  }
+
+  .register-image {
+    object-fit: cover;
+    width: 450px;
+  }
+
+  .register-form {
+    & input {
+      width: 350px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register-section {
+    column-gap: 40px;
+    & input {
+      width: 250px;
+    }
+  }
+
+  .register-image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .register-form-title {
+    font-size: 35px;
+  }
+
+  .register-form-description {
+    font-size: 18px;
+  }
+}
