@@ -1,0 +1,179 @@
+@import "../../index.scss";
+
+.navBar {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 18px 144px 18px 144px;
+  max-width: 100vw;
+}
+
+.navBar-brand {
+  flex-grow: 1;
+  font-family: $primary-font;
+  font-size: 28px;
+  font-weight: $semi-bold;
+}
+
+.navBar-logo {
+  padding-right: 5px;
+  position: relative;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+}
+
+.navBar-item {
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: $bold;
+  margin-right: 48px;
+  text-transform: uppercase;
+}
+
+.navBar-icon {
+  font-size: 17px;
+  padding-right: 7px;
+  position: relative;
+  top: 3px;
+}
+
+.active-link {
+  border-bottom: 2px solid $accent-color;
+  font-size: 17px;
+  transition: border 0.3s ease-in;
+  padding: 0 5px 0 5px;
+}
+
+.inactive-link {
+  color: $gray-color;
+  transition: font-size 0.5s ease;
+
+  &:hover {
+    font-size: 17px;
+    color: $primary-color;
+  }
+}
+
+.items-counter {
+  background-color: rgb(171, 5, 5);
+  border-radius: 50%;
+  color: $bright-color;
+  font-family: $secondary-font;
+  font-size: 16px;
+  padding: 3px 8px 3px 8px;
+  position: relative;
+  top: -10px;
+}
+
+.link-disabled {
+  color: #bfc0c2;
+  cursor: not-allowed;
+}
+
+.loggdedin {
+  position: relative;
+}
+
+.user-name {
+  @include button-custom;
+  font-family: $secondary-font;
+  font-weight: $bold;
+  font-size: 16px;
+  color: $accent-color;
+  cursor: pointer;
+}
+
+.loggedin-menu {
+  align-items: center;
+  background-color: $bright-color;
+  border-radius: 10%;
+  border: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  justify-content: flex-start;
+  position: absolute;
+  right: 160px;
+  text-align: center;
+  width: 150px;
+
+  & button {
+    @include button;
+    background-color: rgb(171, 5, 5);
+    font-weight: $bold;
+    width: 100px;
+  }
+}
+
+.favorite-list {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  font-family: $secondary-font;
+  border-bottom: 1px solid $border-color;
+}
+
+.display-none {
+  display: none;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .navBar {
+    margin: 18px 100px 18px 100px;
+  }
+
+  .navBar-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navBar-brand {
+    font-size: 24px;
+  }
+
+  .navBar-item {
+    font-size: 14px;
+    margin-right: 25px;
+  }
+  .active-link {
+    font-size: 15px;
+  }
+
+  .inactive-link {
+    &:hover {
+      font-size: 15px;
+    }
+  }
+
+  .items-counter {
+    font-size: 14px;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+
+  .loggedin-menu {
+    right: 80px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .navBar {
+    margin: 18px 40px 18px 40px;
+  }
+
+  .navBar-item {
+    margin-right: 20px;
+  }
+
+  .navBar-brand-icon {
+    font-size: 21px;
+  }
+
+  .loggedin-menu {
+    right: 20px;
+  }
+}
