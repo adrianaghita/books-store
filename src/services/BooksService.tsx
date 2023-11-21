@@ -2,7 +2,7 @@ import { Book } from "../context/BooksContext";
 
 export async function fetchBestBooks() {
   const response = await fetch(
-    "https://raw.githubusercontent.com/adrianaghita/booksDataBase/main/booksDataBase.json"
+    "https://raw.githubusercontent.com/adrianaghita/books/main/booksDataBase"
   );
   if (!response.ok) {
     throw new Error("Could not fetch book detail");
@@ -15,7 +15,7 @@ export async function fetchBestBooks() {
 
 export async function fetchRecentlyAddedBooksData() {
   const response = await fetch(
-    "https://raw.githubusercontent.com/adrianaghita/booksDataBase/main/booksDataBase.json"
+    "https://raw.githubusercontent.com/adrianaghita/books/main/booksDataBase"
   );
   if (!response.ok) {
     throw new Error("Could not fetch book detail");
