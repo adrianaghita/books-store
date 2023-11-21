@@ -1,0 +1,108 @@
+@import "../../../index.scss";
+
+.cart-item {
+  border-bottom: 1px solid $lines-color;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 0 0 32px 0;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.cart-item-image {
+  width: 92px;
+  height: 130px;
+}
+
+.cart-item-title {
+  color: $secondary-color;
+  font-family: $primary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  margin: 0;
+  text-align: left;
+}
+
+.cart-item-author {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: $bold;
+  margin: 0;
+  padding-top: 5px;
+  & span {
+    font-size: 20px;
+    font-weight: $regular;
+  }
+}
+
+.cart-item-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.cart-item-price {
+  color: $accent-color;
+  font-family: $secondary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.cart-item-action {
+  @include button-custom;
+}
+
+.cart-item-action-icon {
+  @include button-custom-icon;
+}
+
+.quantity {
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  font-family: $secondary-font;
+  font-weight: $bold;
+  font-size: 16px;
+
+  & p {
+    margin: 0 10px 0 10px;
+  }
+
+  & button {
+    background-color: $bright-color;
+    border: 1px solid $border-color;
+    padding: 5px 8px 5px 8px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $small-laptop) {
+  .cart-item-title {
+    font-size: 25px;
+  }
+
+  .cart-item-author {
+    font-size: 20px;
+
+    & span {
+      font-size: 18px;
+    }
+  }
+
+  .cart-item-price {
+    font-size: 25px;
+  }
+
+  .cart-item-action {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cart-item {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}

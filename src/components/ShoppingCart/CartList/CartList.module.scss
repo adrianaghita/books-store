@@ -1,0 +1,76 @@
+@import "../../../index.scss";
+
+.cart {
+  margin: 100px 252px 51px 252px;
+}
+
+.cart-title {
+  font-family: $primary-font;
+  font-size: 38px;
+  font-weight: $bold;
+  margin-bottom: 64px;
+}
+
+.cart-total-price {
+  display: flex;
+  font-family: $primary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  justify-content: space-between;
+  margin-bottom: 47px;
+
+  & span {
+    color: $accent-color;
+    font-family: $secondary-font;
+    font-weight: $bold;
+    text-align: right;
+  }
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-button-bright {
+  @include button-bright;
+}
+
+.cart-button-black {
+  @include button;
+}
+
+.empty-cart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+}
+
+.empty-cart-message {
+  font-family: $primary-font;
+  font-size: 30px;
+  font-weight: $semi-bold;
+  margin-top: 0;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .cart {
+    margin: 100px 150px 51px 150px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .cart {
+    margin: 100px 100px 51px 100px;
+  }
+
+  .cart-button-black {
+    width: 210px;
+  }
+
+  .cart-button-bright {
+    width: 210px;
+  }
+}
