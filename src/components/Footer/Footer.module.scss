@@ -1,0 +1,46 @@
+@import "../../index.scss";
+.footer {
+  background-color: $footer-background-color;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100vw;
+  padding: 25px 144px 25px 144px;
+}
+.button {
+  border: none;
+  padding: 0;
+  width: 0;
+}
+
+.button-invisible {
+  display: none;
+}
+
+.footer-content {
+  font-family: $secondary-font;
+  font-size: 14px;
+}
+
+.footer-link {
+  text-decoration: underline;
+  font-weight: $bold;
+  margin-left: 5px;
+}
+
+.footer-icon {
+  font-size: 32px;
+  position: relative;
+  top: 5px;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .footer {
+    padding: 25px 100px 25px 100px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .footer {
+    padding: 25px 50px 25px 50px;
+  }
+}
