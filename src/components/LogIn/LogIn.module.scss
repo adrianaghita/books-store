@@ -1,0 +1,135 @@
+@import "../../index.scss";
+
+.logIn-section {
+  align-items: flex-start;
+  box-sizing: border-box;
+  column-gap: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 120px;
+  max-width: 100vw;
+}
+
+.logIn-image {
+  height: 550px;
+  width: 512px;
+}
+
+.logIn-form {
+  & input {
+    display: block;
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: $regular;
+    margin-bottom: 32px;
+    margin-top: 16px;
+    padding: 10px 0 11px 12px;
+    width: 512px;
+  }
+
+  & label {
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: $bold;
+  }
+
+  & .logIn-form-checkbox-input {
+    display: inline;
+    height: 16px;
+    margin-top: 43px;
+    padding: 0;
+    width: 16px;
+  }
+
+  & .logIn-form-regular-label {
+    font-weight: $regular;
+    margin-left: 8px;
+    position: relative;
+    top: -3px;
+  }
+}
+
+.logIn-form-title {
+  font-family: $primary-font;
+  font-size: 48px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.logIn-form-description {
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: $regular;
+  margin: 11px 0 64px 0;
+}
+
+.logIn-form-btn {
+  @include button;
+  margin: 50px 0 48px 0;
+}
+
+.logIn-form-links {
+  display: block;
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: $regular;
+  margin-bottom: 32px;
+  text-decoration: underline;
+}
+
+.error-message {
+  border: 1px solid red;
+  padding: 10px;
+  background-color: rgb(245, 214, 214);
+  font-family: $secondary-font;
+  width: 512px;
+}
+
+@media screen and (max-width: 1024px) {
+  .logIn-section {
+    column-gap: 80px;
+    justify-content: flex-start;
+  }
+
+  .logIn-image {
+    object-fit: cover;
+    width: 450px;
+  }
+
+  .logIn-form {
+    & input {
+      width: 350px;
+    }
+  }
+
+  .error-message {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logIn-section {
+    column-gap: 40px;
+    & input {
+      width: 250px;
+    }
+  }
+
+  .logIn-image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .logIn-form-title {
+    font-size: 35px;
+  }
+
+  .logIn-form-description {
+    font-size: 18px;
+  }
+
+  .error-message {
+    width: 250px;
+  }
+}
