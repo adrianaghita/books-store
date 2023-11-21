@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { RouterProvider } from "react-router-dom";
 import { BookProvider } from "./context/BooksContext";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
