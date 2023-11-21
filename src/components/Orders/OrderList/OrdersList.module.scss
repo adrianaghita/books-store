@@ -1,0 +1,61 @@
+@import "../../../index.scss";
+
+.order-list {
+  margin: 138px 284px 230px 284px;
+}
+
+.order-list-title {
+  font-family: $primary-font;
+  font-size: 38px;
+  font-weight: $bold;
+  margin-bottom: 64px;
+}
+
+.empty-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  justify-content: center;
+
+  & h2 {
+    font-family: $primary-font;
+    font-size: 30px;
+    font-weight: $semi-bold;
+    margin-top: 0;
+  }
+
+  & .icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 14px;
+    animation: moveCar 3s linear alternate infinite;
+  }
+}
+
+@keyframes moveCar {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(5vw);
+  }
+}
+
+.cart-button-bright {
+  @include button-bright;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .order-list {
+    margin: 138px 130px 230px 130px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .order-list {
+    margin: 138px 80px 230px 80px;
+  }
+}

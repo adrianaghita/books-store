@@ -1,0 +1,104 @@
+@import "../../../index.scss";
+
+.order-item {
+  border-bottom: 1px solid $lines-color;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+}
+
+.order-item-image {
+  align-items: center;
+  background-color: $secondary-background-color;
+  display: flex;
+  height: 119px;
+  justify-content: center;
+  width: 108px;
+
+  & img {
+    height: 72px;
+    width: 58px;
+  }
+}
+
+.order-item-number {
+  font-family: $primary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.order-item-number-of-items {
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: $regular;
+  margin: 4px 0 24px 0;
+
+  & span {
+    font-weight: $bold;
+  }
+}
+
+.order-item-delivery-status {
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: $regular;
+
+  & span {
+    font-weight: $bold;
+  }
+}
+
+.order-item-price {
+  color: $accent-color;
+  font-family: $secondary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  margin-top: 0;
+}
+
+.order-item-price-container {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.order-item-action {
+  @include button-custom;
+}
+
+.order-item-action-icon {
+  @include button-custom-icon;
+  height: 16px;
+  width: 16px;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .order-item {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .order-item-number {
+    font-size: 25px;
+  }
+
+  .order-item-number-of-items {
+    font-size: 20px;
+  }
+
+  .order-item-delivery-status {
+    font-size: 15px;
+  }
+
+  .order-item-price {
+    font-size: 25px;
+  }
+
+  .order-item-action {
+    font-size: 15px;
+  }
+}
