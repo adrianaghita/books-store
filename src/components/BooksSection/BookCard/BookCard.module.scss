@@ -1,0 +1,113 @@
+@import "../../../index.scss";
+
+.card {
+  display: grid;
+  grid-template-rows: 3fr, 2fr, 1fr;
+  width: 232px;
+  padding: 24px 24px 0 24px;
+  margin-bottom: 10px;
+  cursor: auto;
+}
+
+.two-columns-grid {
+  @include two-columns-grid;
+  margin-bottom: 30px;
+}
+
+.cover-section {
+  position: relative;
+}
+
+.card-image {
+  height: 329px;
+  object-fit: cover;
+  width: 232px;
+  cursor: pointer;
+}
+
+.favorites {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  left: -10px;
+  top: -15px;
+}
+
+.add-to-favorites {
+  @include button-custom;
+  border: 1px solid $border-color;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $bright-color;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 3s ease-out;
+
+  &:active {
+    transform: scale(3, 3);
+  }
+
+  & .red {
+    color: rgb(165, 6, 6);
+    transition: color 1s ease;
+  }
+
+  & .black {
+    color: $primary-color;
+    transition: color 1s ease;
+  }
+}
+
+.card-price {
+  color: $accent-color;
+  font-family: $secondary-font;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: end;
+
+  &:hover {
+    opacity: 80%;
+  }
+}
+
+.card-title {
+  cursor: pointer;
+  font-family: $primary-font;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 80%;
+    color: $accent-color;
+  }
+}
+
+.card-author {
+  cursor: pointer;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 8px;
+
+  &:hover {
+    opacity: 80%;
+    color: $accent-color;
+  }
+}
+
+.button {
+  @include button;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    transform: translateY(3px);
+  }
+}
