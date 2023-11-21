@@ -1,0 +1,45 @@
+@import "../../../index.scss";
+
+.favorite-list {
+  margin: 100px 252px 51px 252px;
+}
+
+.favorite-list-title {
+  font-size: 35px;
+  font-family: $primary-font;
+  margin: 100px 0 50px 0;
+}
+
+.heart {
+  color: rgb(165, 6, 6);
+  width: 30px;
+  height: 30px;
+}
+
+.empty-favorite-list {
+  font-size: 30px;
+  font-family: $secondary-font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $bold;
+  margin-top: 150px;
+}
+
+.broken-heart {
+  color: rgb(165, 6, 6);
+  width: 50px;
+  height: 40px;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .favorite-list {
+    margin: 100px 150px 51px 150px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .favorite-list {
+    margin: 100px 100px 51px 100px;
+  }
+}

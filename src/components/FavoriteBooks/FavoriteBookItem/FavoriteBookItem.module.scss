@@ -1,0 +1,87 @@
+@import "../../../index.scss";
+
+.favorite-book {
+  border-bottom: 1px solid $lines-color;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 0 0 32px 0;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.favorite-book-image {
+  width: 92px;
+  height: 130px;
+}
+
+.favorite-book-title {
+  color: $secondary-color;
+  font-family: $primary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  margin: 0;
+  text-align: left;
+}
+
+.favorite-book-author {
+  color: $secondary-color;
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: $bold;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.favorite-book-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.favorite-book-price {
+  color: $accent-color;
+  font-family: $secondary-font;
+  font-size: 30px;
+  font-weight: $bold;
+  margin: 0;
+}
+
+.favorite-book-action {
+  @include button-custom;
+}
+
+.favorite-book-action-icon {
+  @include button-custom-icon;
+  color: rgb(165, 6, 6);
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: $small-laptop) {
+  .favorite-book-title {
+    font-size: 25px;
+  }
+
+  .favorite-book-author {
+    font-size: 20px;
+
+    & span {
+      font-size: 18px;
+    }
+  }
+
+  .favorite-book-price {
+    font-size: 25px;
+  }
+
+  .favorite-book-action {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .favorite-book {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
