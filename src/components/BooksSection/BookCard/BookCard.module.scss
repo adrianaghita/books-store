@@ -111,3 +111,36 @@
     transform: translateY(3px);
   }
 }
+
+@media screen and (max-width: $mobile) {
+  .card {
+    width: 180px;
+  }
+
+  .card-image {
+    width: 180px;
+    height: 250px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    text-wrap: nowrap;
+  }
+
+  .card-author {
+    font-size: 10px;
+    text-wrap: nowrap;
+  }
+  .card-price {
+    font-size: 13px;
+  }
+
+  .two-columns-grid {
+    margin-bottom: 0;
+  }
+
+  .button {
+    margin: auto;
+    width: 180px;
+  }
+}

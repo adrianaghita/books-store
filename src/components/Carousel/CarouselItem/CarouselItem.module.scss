@@ -49,3 +49,16 @@
     height: 254px;
   }
 }
+
+@media screen and (max-width: $mobile) {
+  .carousel-image {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .carousel-thumbnail {
+    position: relative;
+    top: -80px;
+  }
+}

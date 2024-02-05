@@ -64,6 +64,7 @@
 @media screen and (max-width: $tablet) {
   .carousel {
     height: 630px;
+    margin: 0 10px 0 10px;
   }
 
   .carousel-content {
@@ -76,5 +77,19 @@
 
   .carousel-text {
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    padding-bottom: 10rem;
+  }
+
+  .carousel-content {
+    margin: 10rem 2rem 0rem 2rem;
+    text-align: center;
   }
 }

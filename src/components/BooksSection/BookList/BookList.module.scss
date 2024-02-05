@@ -36,3 +36,9 @@
     margin: 0 70px 0 70px;
   }
 }
+
+@media screen and (max-width: $mobile) {
+  .books-section {
+    margin: 0 30px 0 30px;
+  }
+}

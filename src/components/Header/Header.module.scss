@@ -160,6 +160,10 @@
   }
 }
 
+.burger-menu-icon {
+  display: none;
+}
+
 @media screen and (max-width: $tablet) {
   .navBar {
     margin: 18px 40px 18px 40px;
@@ -175,5 +179,36 @@
 
   .loggedin-menu {
     right: 20px;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .navBar {
+    align-items: flex-start;
+    justify-content: center;
+    margin: 18px 30px 18px 30px;
+  }
+  .navBar-brand {
+    font-size: 20px;
+  }
+  .navBar-item {
+    display: none;
+  }
+  .burger-menu-icon {
+    display: block;
+    border: none;
+    background-color: #fff;
+    margin-top: 3px;
+  }
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+    font-size: 15px;
+  }
+
+  .items-counter {
+    font-size: 12px;
   }
 }
