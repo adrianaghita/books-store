@@ -86,6 +86,7 @@
     flex-direction: column;
     height: 600px;
     padding-bottom: 10rem;
+    max-width: 95vw;
   }
 
   .carousel-content {
@@ -93,5 +94,6 @@
     margin: 10rem 2rem 0rem 2rem;
     text-align: center;
     white-space: wrap;
+    max-width: 90vw;
   }
 }
