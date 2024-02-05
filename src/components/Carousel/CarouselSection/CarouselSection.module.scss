@@ -15,7 +15,6 @@
   text-align: left;
   margin-top: 224px;
   margin-left: 120px;
-  white-space: nowrap;
 
   & span {
     display: block;
@@ -34,7 +33,6 @@
   font-family: $secondary-font;
   font-weight: $regular;
   font-size: 20px;
-  height: 52px;
   margin-top: 25px;
 }
 
@@ -93,7 +91,5 @@
     object-fit: contain;
     margin: 10rem 2rem 0rem 2rem;
     text-align: center;
-    white-space: wrap;
-    max-width: 90vw;
   }
 }
