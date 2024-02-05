@@ -89,7 +89,9 @@
   }
 
   .carousel-content {
+    object-fit: contain;
     margin: 10rem 2rem 0rem 2rem;
     text-align: center;
+    white-space: wrap;
   }
 }
